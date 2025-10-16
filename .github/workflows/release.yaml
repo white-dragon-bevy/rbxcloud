@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*.*.*"
+      - "v*.*.*-*"  # 支持 v1.2.3-test 等测试版本
 
 jobs:
   check-release-version:
