@@ -76,8 +76,7 @@ fn check_proxy_config() {
     }
 
     if found_proxy {
-        eprintln!("注意: 当前 reqwest 配置可能不会自动使用代理。");
-        eprintln!("如需使用代理，请确保正确配置系统代理或使用支持代理的 reqwest 构建。");
+        eprintln!("代理配置已启用，所有 HTTP/HTTPS 请求将通过代理服务器。");
     }
 }
 
