@@ -803,7 +803,7 @@ dependencies = [
 
 [[package]]
 name = "rbxcloud"
-version = "0.17.0"
+version = "0.17.1-test"
 dependencies = [
  "anyhow",
  "base64 0.22.0",

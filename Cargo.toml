@@ -1,10 +1,10 @@
 [package]
 name = "rbxcloud"
-version = "0.17.0"
-description = "CLI and SDK for the Roblox Open Cloud APIs"
-authors = ["Stephen Leitnick"]
+version = "0.17.1-test"
+description = "CLI and SDK for the Roblox Open Cloud APIs (Fork with dotenv and proxy support)"
+authors = ["Stephen Leitnick", "White Dragon"]
 license = "MIT"
-repository = "https://github.com/Sleitnick/rbxcloud"
+repository = "https://github.com/white-dragon-bevy/rbxcloud"
 readme = "README.md"
 documentation = "https://sleitnick.github.io/rbxcloud/"
 edition = "2021"
