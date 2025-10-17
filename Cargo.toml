@@ -1,6 +1,6 @@
 [package]
 name = "rbxcloud"
-version = "0.18.0"
+version = "0.17.0-wg"
 description = "CLI and SDK for the Roblox Open Cloud APIs (Fork with dotenv and proxy support)"
 authors = ["Stephen Leitnick", "White Dragon"]
 license = "MIT"

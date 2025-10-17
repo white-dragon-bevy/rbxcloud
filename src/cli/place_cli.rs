@@ -9,11 +9,11 @@ pub enum PlaceCommands {
     /// Get Place information
     Get {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// Pretty-print the JSON response
@@ -28,11 +28,11 @@ pub enum PlaceCommands {
     /// Update Place name
     UpdateName {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// New Place name
@@ -51,11 +51,11 @@ pub enum PlaceCommands {
     /// Update Place description
     UpdateDescription {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// New Place description
@@ -74,11 +74,11 @@ pub enum PlaceCommands {
     /// Update Place server size
     UpdateServerSize {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// New Place server size

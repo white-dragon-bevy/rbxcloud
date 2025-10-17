@@ -26,7 +26,7 @@ pub enum DataStoreCommands {
         cursor: Option<String>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -65,7 +65,7 @@ pub enum DataStoreCommands {
         cursor: Option<String>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -92,7 +92,7 @@ pub enum DataStoreCommands {
         key: String,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key
@@ -135,7 +135,7 @@ pub enum DataStoreCommands {
         attributes: Option<String>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -174,7 +174,7 @@ pub enum DataStoreCommands {
         attributes: Option<String>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key
@@ -197,7 +197,7 @@ pub enum DataStoreCommands {
         key: String,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key
@@ -240,7 +240,7 @@ pub enum DataStoreCommands {
         cursor: Option<String>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -271,7 +271,7 @@ pub enum DataStoreCommands {
         version_id: String,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key

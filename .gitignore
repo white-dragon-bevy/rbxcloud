@@ -6,7 +6,7 @@ test.sh
 *.psd
 .DS_Store
 
-# 环境变量文件（保留 .env.example 用于文档）
+# 环境变量文件（保留 .env.roblox.example 用于文档）
 .env
-.env.local
-.env.*.local
+.env.*
+test.rbxl

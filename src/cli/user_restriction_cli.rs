@@ -9,7 +9,7 @@ pub(crate) enum UserRestrictionCommands {
     /// Get user restriction information
     Get {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// User ID
@@ -32,7 +32,7 @@ pub(crate) enum UserRestrictionCommands {
     /// Update user restriction information
     Update {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// User ID
@@ -75,7 +75,7 @@ pub(crate) enum UserRestrictionCommands {
     /// List user restrictions
     List {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID
@@ -106,7 +106,7 @@ pub(crate) enum UserRestrictionCommands {
     /// List user restriction logs
     Logs {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID

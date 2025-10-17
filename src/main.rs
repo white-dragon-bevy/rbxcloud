@@ -4,7 +4,7 @@ use clap::Parser;
 use cli::Cli;
 use std::process;
 
-/// 加载项目目录中所有的 .env 和 .env.* 文件
+/// 加载项目目录中所有的 .env.roblox 和 .env.roblox.* 文件
 fn load_dotenv_files() {
     use std::fs;
     use std::path::Path;
@@ -21,8 +21,8 @@ fn load_dotenv_files() {
                 if path.is_file() {
                     if let Some(file_name) = path.file_name() {
                         let file_name_str = file_name.to_string_lossy().to_string();
-                        // 匹配 .env 或 .env.* 文件
-                        if file_name_str == ".env" || file_name_str.starts_with(".env.") {
+                        // 匹配 .env.roblox 或 .env.roblox.* 文件
+                        if file_name_str == ".env.roblox" || file_name_str.starts_with(".env.roblox.") {
                             return Some(file_name_str);
                         }
                     }
@@ -32,18 +32,18 @@ fn load_dotenv_files() {
             .collect();
 
         // 排序以确保加载顺序一致
-        // .env 文件最后加载，这样它可以覆盖其他环境文件的值
+        // .env.roblox 文件最后加载，这样它可以覆盖其他环境文件的值
         env_files.sort_by(|a, b| {
-            if a == ".env" {
+            if a == ".env.roblox" {
                 std::cmp::Ordering::Greater
-            } else if b == ".env" {
+            } else if b == ".env.roblox" {
                 std::cmp::Ordering::Less
             } else {
                 a.cmp(b)
             }
         });
 
-        // 加载所有找到的 .env 文件
+        // 加载所有找到的 .env.roblox 文件
         for env_file in env_files {
             let env_path = current_dir.join(&env_file);
             match dotenvy::from_path(&env_path) {
@@ -82,7 +82,7 @@ fn check_proxy_config() {
 
 #[tokio::main]
 async fn main() {
-    // 加载所有 .env 文件
+    // 加载所有 .env.roblox 文件
     load_dotenv_files();
 
     let cli_args = Cli::parse();

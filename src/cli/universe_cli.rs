@@ -9,7 +9,7 @@ pub enum UniverseCommands {
     /// Get universe information
     Get {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -24,7 +24,7 @@ pub enum UniverseCommands {
     /// Restart servers
     Restart {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key
@@ -35,7 +35,7 @@ pub enum UniverseCommands {
     /// Update Universe name
     UpdateName {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// New Universe name
@@ -54,7 +54,7 @@ pub enum UniverseCommands {
     /// Update Universe description
     UpdateDescription {
         /// Universe ID
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// New Universe description

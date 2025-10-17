@@ -14,11 +14,11 @@ pub enum ExperienceCommands {
         filename: String,
 
         /// Place ID of the experience
-        #[clap(short = 'i', long, value_parser)]
+        #[clap(short = 'i', long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Version type

@@ -15,7 +15,7 @@ pub enum MessagingCommands {
         message: String,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key

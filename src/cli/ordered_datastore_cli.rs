@@ -36,7 +36,7 @@ pub enum OrderedDataStoreCommands {
         filter: Option<String>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -67,7 +67,7 @@ pub enum OrderedDataStoreCommands {
         value: i64,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -94,7 +94,7 @@ pub enum OrderedDataStoreCommands {
         id: String,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -121,7 +121,7 @@ pub enum OrderedDataStoreCommands {
         id: String,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Roblox Open Cloud API Key
@@ -152,7 +152,7 @@ pub enum OrderedDataStoreCommands {
         allow_missing: Option<bool>,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response
@@ -183,7 +183,7 @@ pub enum OrderedDataStoreCommands {
         increment: i64,
 
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Pretty-print the JSON response

@@ -10,11 +10,11 @@ pub enum LuauExecutionCommands {
     /// Executes Luau code on Roblox
     Execute {
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID of the experience
-        #[clap(short = 'i', long, value_parser)]
+        #[clap(short = 'i', long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// Version ID of the experience
@@ -45,11 +45,11 @@ pub enum LuauExecutionCommands {
     /// Gets information on a previously executed task
     GetTask {
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID of the experience
-        #[clap(short = 'i', long, value_parser)]
+        #[clap(short = 'i', long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// Version ID of the experience
@@ -76,11 +76,11 @@ pub enum LuauExecutionCommands {
     /// Retrieves logs on a previously executed task
     GetLogs {
         /// Universe ID of the experience
-        #[clap(short, long, value_parser)]
+        #[clap(short, long, value_parser, env = "RBXCLOUD_UNIVERSE_ID")]
         universe_id: u64,
 
         /// Place ID of the experience
-        #[clap(short = 'i', long, value_parser)]
+        #[clap(short = 'i', long, value_parser, env = "RBXCLOUD_PLACE_ID")]
         place_id: u64,
 
         /// Version ID of the experience

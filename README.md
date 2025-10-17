@@ -43,6 +43,40 @@ Possible use-cases:
 
 The goal of this project is to support all API endpoints that Roblox provides.
 
+## Environment Variables
+
+`rbxcloud` supports loading environment variables from `.env.roblox` and `.env.roblox.*` files in your project directory. This allows you to set default values for common parameters and simplify your commands.
+
+### Setup
+
+1. Copy the example file:
+```sh
+$ cp .env.roblox.example .env.roblox
+```
+
+2. Edit `.env.roblox` with your configuration:
+```sh
+# Required: Your Roblox Open Cloud API Key
+RBXCLOUD_API_KEY=your_api_key_here
+
+# Optional: Default Universe ID
+RBXCLOUD_UNIVERSE_ID=123456789
+
+# Optional: Default Place ID
+RBXCLOUD_PLACE_ID=987654321
+```
+
+3. Use simplified commands:
+```sh
+# Without environment variables
+$ rbxcloud experience publish --filename game.rbxl --place-id 987654321 --universe-id 123456789 --api-key your_key --version-type published
+
+# With environment variables
+$ rbxcloud experience publish --filename game.rbxl --version-type published
+```
+
+Command-line parameters always override environment variables, allowing temporary changes when needed.
+
 ## Install CLI
 ### Aftman
 Run the `aftman add` command within your project directory. This will add `rbxcloud` to the project's `aftman.toml` file (or create one if it doesn't yet exist).
